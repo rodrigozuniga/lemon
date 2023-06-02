@@ -1,0 +1,683 @@
+<!-- Little Lemon -->
+<!-- INDEX -->
+
+<style>
+html{
+background-color:beige;
+height:1100px;
+}
+
+body{
+height:1000px;
+min-height: 950px;
+width:1050;
+min-width: 1050px;
+max-width: 1050px;
+background-color: beige;
+padding:1px;
+vertical-align: middle;
+}
+
+#hd-container {
+display:flex;
+flex-direction: row;
+justify-content:center;
+background-color: rgb(32, 75, 183);
+opacity:.0.9;
+z-index: 1;
+height:15.5%;
+min-width: 500px;
+min-height: 100px;
+align-items: center;
+background-image:linear-gradient(5deg,azure,rgb(155,155,205,.95),lightblue);
+}
+
+
+.logo {
+flex:1 1 1;
+min-height: 100px;
+width:80px;
+min-width: 80px;
+height:100px;
+margin-top:3px;
+margin-bottom:2%;
+margin-left:2%;
+margin-right:2%;
+vertical-align: middle;
+transform:rotate(5deg) ;
+opacity: 0.8;
+z-index:1;
+border:gray 1px solid;
+}
+
+
+@keyframes changebordercolor {
+from {
+color:yellowgreen;
+-webkit-text-stroke: 1px yellow;
+
+}
+
+to {
+color: yellow;
+-webkit-text-stroke: 1px yellowgreen;
+}
+}
+
+#tlt,#subtlt {
+animation-duration: 1s;
+animation-name: changebordercolor;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-delay: 1s;
+transition-timing-function: linear;
+}
+
+#tlt {
+flex-grow: 1;
+text-align: center;
+font-size: xx-large;
+font-weight:900;
+font-family: Arial, Helvetica, sans-serif;
+color:rgb(219, 241, 75);
+}
+
+#subtlt {
+flex-grow: 1;
+font-size: large;
+line-height: 50%;
+}
+
+.menurowabove {
+display:flex;
+min-width: 500px;
+height:0rem;
+flex-direction: row;
+background-color:rgb(216, 212, 207);
+border: solid red 10px;
+}
+
+
+.menurow {
+display: flex;
+min-width: 500px;
+height:3.5%;
+flex-direction: row;
+background-color:rgb(216, 212, 207);
+align-items: center;
+border: solid grey 1px;
+justify-content:space-evenly;
+align-content: center;
+}
+
+.menuitem {
+font-family: Arial, Helvetica, sans-serif;
+flex:1 1 20%;
+align-self: center;
+text-align: center;
+border-right:solid rgb(203, 201, 201) 1px;
+font-size: small;
+align-items: center;
+}
+
+
+.menubutton{
+width:100%;
+background:none;
+border:solid grey 1px;
+position:relative;
+}
+
+.menubutton2{
+width:100%;
+background:none;
+border:solid grey 1px;
+position:relative;
+margin-top: 0;
+margin-bottom:40px;
+padding-top:0px;
+padding-bottom:0px;
+background-image:linear-gradient(0deg,azure,rgb(155,155,205,.5),lightblue);
+border-radius:10%;
+}
+
+.comingsoon {
+margin-top: -85px;
+margin-bottom:30px;
+padding-top: 0px;
+padding-bottom:0px;
+visibility: hidden;
+}
+
+#comingsoon{
+visibility:hidden;
+}
+
+.menubutton3{
+font-family: Arial, Helvetica, sans-serif;
+flex:1 1 20%;
+align-self: center;
+text-align: center;
+border-right:solid rgb(203, 201, 201) 1px;
+border-radius: 5%;
+font-size: small;
+align-items: center;
+background-image:linear-gradient(0deg,azure,rgb(155,155,205,.5),lightblue);
+}
+
+.menubutton3>.menubutton2:hover{
+color:blue;
+font-weight: 600;
+}
+
+.menubutton3>.comingsoon{
+color:blue;
+}
+
+.menubutton2:hover ~ .comingsoon{
+visibility:visible;
+}
+
+.soon{
+position:relative;
+display:inline-block;
+}
+
+.soontxt[xx="1"] ,.soontxt[xx="2"]{
+z-index: 1;
+color:red;
+background-color:none;
+position:relative;
+visibility:visible;
+font-size: smaller;
+color:rgb(70, 134, 6);
+text-align: center;
+margin-top: -85px;
+visibility: hidden;
+}
+
+@keyframes blinker {
+from {
+opacity:0;
+}
+
+to {
+opacity:1
+}
+}
+
+#nowLooking {
+animation-duration: 0.5s;
+animation-name: blinker;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-delay: 1s;
+transition-timing-function: linear;
+}
+
+.nowlooking{
+color:red;
+font-family: Arial, Helvetica, sans-serif;
+font-size: small;
+position: relative;
+margin-top: -85px;
+margin-bottom:30px;
+visibility: visible;
+padding-top: 0px;
+padding-bottom:0px;
+z-index: 2;
+}
+
+.r1c2 {
+display: grid;
+height: 250px;
+grid-template-columns: 49% 49%;
+grid-template-rows: 100%;
+border:solid 1px green;
+border-radius: 5%;
+justify-content: center;
+font-family: Arial, Helvetica, sans-serif;
+align-items: center;
+}
+
+.mainitem1{
+display: flex;
+flex-direction: column;
+flex: 1 1 1;
+border:green 1px solid;
+height:99%;
+border-radius: 8%;
+text-align: left;
+padding-right:10px;
+color:rgb(96, 95, 95);
+background-color: rgb(243, 232, 220,.75);
+}
+
+.veg{
+color:green;
+font-size:smaller;
+}
+
+.messageBoard{
+display:flex;
+flex-direction: column;
+flex: 1 1 1;
+height: 90%;
+font-size: medium;
+font-weight: 550;
+margin-left:1rem;
+margin-top: auto;
+margin-bottom:auto;
+
+}
+
+.messageBlock{
+display:flex;
+flex-direction: column;
+height:33%;
+flex:1 1 1;
+margin:0;
+}
+
+.headerMessage{
+margin-bottom: 3px;
+color:gray
+}
+
+.itemMessage{
+margin-left:7rem;
+}
+
+
+.promopctn{
+color: rgb(192, 62, 62);
+font-weight: 600;
+}
+
+.mainitem2{
+display: flex;
+flex-direction: column;
+height:99%;
+width:95%;
+border-radius: 8%;
+color:rgb(96, 95, 95);
+background-color: rgb(243, 232, 220,.75);
+border:1px solid green;
+;
+}
+
+.mainContainerBrothers{
+display:flex;
+height:100%;
+width:100%;
+flex-direction: column;
+border-radius: 8%;
+background-color: rgb(243, 232, 220,.75);
+padding-top: 5px;
+padding-left: 5px;
+color:rgb(121, 119, 119);
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.containerBrothers1{
+display:flex;
+height:50%;
+width:100%;
+flex-direction: row;
+margin-top:0px;
+align-items: flex-end;
+}
+
+.mainfirstrowpic {
+flex:1 1 1;
+height:85px;
+width:65px;
+border-radius: 8%;
+padding-top:3px;
+margin-left: 3px;
+margin-right:3px;
+}
+
+.txtbrothers1{
+text-align: left;
+height:90%;
+width:89%;
+}
+
+.containerBrothers2{
+display:flex;
+height:60%;
+width:98.5%;
+flex-direction: column;
+margin-top:0;
+padding-bottom: 5px;
+font-size: medium;
+}
+
+.txtbrothers2{
+text-align: left;
+color:rgb(121, 119, 119);
+margin-left: 10px;
+margin-bottom: 0;
+-webkit-padding-start: 0%;
+background-color:none;
+}
+
+
+.r2c3 {
+display: grid;
+height:300px;
+min-height: 300px;
+max-height: 300px;
+grid-template-columns: 33.333% 33.333% 33.333%;
+border:solid 1px green;
+border-radius: 5%;
+min-width: 500px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.mainitem2 {
+border:solid green 1px;
+border-radius: 8%;;
+background-color: none;
+text-align: center;
+min-width: 166.666px;
+min-height:250px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+color:rgb(98, 97, 97);
+margin-left: 7px;
+}
+
+.mainScndRowTxt{
+margin-top: 2px;
+}
+
+.mainScndRowFirstPic{
+width:65%;
+height:auto;
+border:solid 1px green;
+border-radius: 3%;
+margin-top: 0px;
+}
+
+.mainScndRowFirstPic:hover{
+cursor:pointer;
+}
+
+.mainScndRowScndPic{
+width:75%;
+height:auto;
+border:solid 1px green;
+border-radius: 3%;
+margin-top: 0px;
+margin-bottom:0;
+}
+
+.mainScndRowScndPic:hover{
+cursor:pointer;
+}
+
+.mainScndRowThirdPic{
+width:auto;
+height:200px;
+border:solid 1px green;
+border-radius: 3%;
+margin-top: -2rem;
+margin-bottom:0;
+}
+
+.mainScndRowThirdPic:hover{
+cursor:pointer;
+}
+
+.ftContainerIndex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image:linear-gradient(5deg,azure,rgb(155,155,205,.75),lightblue);
+    width:100%;
+    height:3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    opacity: 1;
+    z-index: 2;
+    align-items: center;
+}
+
+.ftContainer:hover{
+    cursor:pointer;
+}
+
+.ftContainer{
+    display:flex;
+    flex-direction: row;
+    background-image:linear-gradient(5deg,azure,rgb(155,155,205,.75),lightblue);
+    width:100%;
+    height:3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    opacity: 1;s
+    z-index: 2;
+    align-items: center;
+}
+
+.ftItem1{
+    width: 28%;
+    height:3rem;
+    flex: 1 1 1;
+    margin-top: 15px;
+    padding: 5px;
+    margin-left:3px;
+}
+
+.ftItemCopyright{
+    padding-left:20px;
+    margin-left: 20px;
+}
+
+.ftItemCopyrightText{
+    width:28%;
+    margin-left:5px;
+    margin-top:20px;
+}
+
+
+
+</style>
+
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta 
+        name="Description" 
+        content="Small restaurant with a healthy mediterranean menu
+                 with a modern twist, including falafel and humus">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+      <title>LittleLemon</title>
+      <link rel="stylesheet" type = "text/css" href="styles.css">      
+</head>
+
+<body class="body">
+    
+<header id="hd-container">
+
+  <img class="logo" src="Asset 18@4x.png" 
+    alt="Little Lemon green logo";>
+
+  <div id="tlt">Little Lemon <br>
+     <span id="subtlt">- a mediterranean restaurant -</span> 
+  </div>
+
+  <img class="logo" src="Asset 20@4x.png" 
+      alt="Little Lemon yellow logo";>
+
+</header>
+
+
+<nav class="menurow" lvl="1">        
+  <div class="menubutton3">  
+      <button class="menubutton2" lvl="1" onclick="window.location.href='index.html';">
+          Home
+      </button>
+      <p class="comingsoon" id="comingsoon">
+        coming soon!
+      </p>
+  </div>
+    
+  <div class="menubutton3"> 
+
+      <button class="menubutton2" lvl="2"       
+        onclick="window.location.href='menu.html'";>
+          Menu
+      </button>
+      <p class="comingsoon" id="comingsoon">
+        coming soon!
+      </p>
+
+  </div>
+  
+  <div  class="menubutton3"> 
+          <button  class="menubutton2"
+            onclick="window.location.href=' ';"
+          >
+              Reservations    
+          </button>
+          <p class="comingsoon">
+            coming soon!
+          </p>
+  </div>    
+ 
+  <div class="menubutton3"> 
+    <button class="menubutton2" lvl="4"
+      onclick="window.location.href=' ';">
+        About us
+    </button>
+    <p class="comingsoon">
+      coming soon!
+    </p>
+  </div>
+
+  <div class="menubutton3"> 
+    <button class="menubutton2" lvl="5" 
+      onclick="window.location.href='applicationform.html'";>
+      Work with us!
+    </button>
+    <p class="nowlooking" id="nowlooking">
+      now hiring!
+    </p>
+  </div>
+
+</nav>
+
+</div>
+
+<main>
+  <hr>
+ 
+
+  <section class="r2c3">
+    <div class="mainitem2"><p>Delicious & Healthy Appetizers
+      <div>
+        <img class="mainScndRowFirstPic" src="humus.png" 
+            alt="Pic of Humus plate"; onclick="window.location.href='menu.html'">
+      </div>
+    </div>
+    <div class="mainitem2"><p> Gyros for Lunch</p>
+      <div>
+        <img class="mainScndRowScndPic" src="gyros.png" 
+              alt="Pic of Gyros on a plate"; onclick="window.location.href='menu.html'">
+      </div>
+    </div>
+    <div class="mainitem2"><p> Yummy Desserts!<p>
+      <div>
+        <img class="mainScndRowThirdPic" src="dessert.png" 
+            alt="Pic Delicious/Yummy desserts"; onclick="window.location.href='menu.html'">
+      </div>
+    </div>
+  </section>
+    
+  <section class="r1c2">
+    <!-- MESSAGE BOARD       -->
+    <div class="mainitem1">
+      <div class="messageBoard">
+        <div class="messageBlock">
+          <div class="headerMessage">&nbsp;Soups of the day:</div>  
+          <div class="itemMessage">Broccoli chedar <span  class="veg">..vegetarian</span></div>
+          <div class="itemMessage">Potato Leak     <span  class="veg">..vegan</span> <p></div>                 
+        </div>
+        <div class="messageBlock">
+          <div class="headerMessage">
+            &nbsp;Lunch Promo:
+          </div>
+          <div class="itemMessage"> 
+            Appetizer + Gyro: <span class="promopctn">-15% </span>
+          </div>
+          <div class="itemMessage">
+                Gyro + Dessert: <span class="promopctn">-15% </span>
+          </div>
+        </div>
+        <div class="messageBlock">
+          <div class="headerMessage">&nbsp; Dietary Restricions:</div>
+          <div class="itemMessage">
+              Please let us know of any diet restriction
+          </div>
+        </div>
+        </div>    
+    </div>
+
+    <!-- BROTHERS STORY -->
+    <div class="mainitem2">
+      <div class="mainContainerBrothers">
+          <div class="containerBrothers1">
+          
+            <img class="mainfirstrowpic" src="twinbrothers.jpg" 
+              alt="bros">
+            <div class="txtbrothers1">
+              Little Lemon is owned by two Italian brothers,
+              Mario and Adrian, who moved to the United States 
+              to pursue their shared dream of owning a restaurant.
+            </div>
+        </div>
+          <div class=containerBrothers2>
+            <div class="txtbrothers2">  
+              To craft the menu, Mario relies on family recipes 
+              and his experience as a chef in Italy. Adrian does all 
+              the marketing for the restaurant and led the effort
+              to expand the menu beyond classic Italian to incorporate 
+              additional cuisines from the Mediterranean region.  
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+</main>
+
+<hr>
+
+<footer>
+  <div class="ftContainerIndex">
+      <span class="ftItemCopyright">&copy;&nbsp;</span>
+      <img class="ftItem1" src="Asset 14@4x.png" 
+            alt="Little Lemon green logo";>
+      <span class="ftItemCopyright">&copy;&nbsp;</span>        
+      <img class="ftItem1" src="Asset 16@4x.png" 
+            alt="Little Lemon yellow logo";>
+      <div class="ftItemCopyrightText">
+          <p>Little Lemon 2022
+          <span class="itemCopyright">&copy;</span>
+          </p>
+        </div>           
+  </div>
+</footer>
+<hr>
+
+</body>
+
+</html>

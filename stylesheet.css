@@ -1,0 +1,432 @@
+/* Little Lemon */
+
+html{
+    background-color:beige;
+    height:1100px;
+}
+
+body{ 
+    height:1000px;
+    min-height: 950px;
+    width:1050;
+    min-width: 1050px;
+    max-width: 1050px;
+    background-color: beige;
+    padding:1px;
+    vertical-align: middle;
+}
+
+#hd-container {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    background-color: rgb(32, 75, 183);
+    opacity:.0.9;
+    z-index: 1;
+    height:15.5%;
+    min-width: 500px;   
+    min-height: 100px; 
+    align-items: center;
+    background-image:linear-gradient(5deg,azure,rgb(155,155,205,.95),lightblue);
+}
+
+
+.logo {
+    flex:1 1 1;
+    width:7%;
+    height:auto;
+    margin-top:3px;
+    margin-bottom:2%;
+    margin-left:2%;
+    margin-right:2%;
+    vertical-align: middle;
+    transform:rotate(5deg) ;
+    opacity: 0.8;
+    z-index:0;
+}
+
+
+@keyframes changebordercolor {
+    from {
+      color:yellowgreen;
+      -webkit-text-stroke: 1px yellow; 
+ 
+    }
+  
+    to {
+      color: yellow;
+      -webkit-text-stroke: 1px yellowgreen; 
+    } 
+}
+  
+#tlt,#subtlt {
+    animation-duration: 1s;
+    animation-name: changebordercolor;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    transition-timing-function: linear;
+  }
+  
+#tlt {
+    flex-grow: 1;
+    text-align: center;
+    font-size: xx-large;
+    font-weight:900;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(219, 241, 75);
+    } 
+ 
+#subtlt {
+    flex-grow: 1;
+    font-size: large;
+    line-height: 50%;
+    } 
+
+.menurowabove {
+        display:flex;
+        min-width: 500px;
+        height:0rem;
+        flex-direction: row;
+        background-color:rgb(216, 212, 207);
+        border: solid red 10px;
+}
+
+
+.menurow {
+display: flex;
+min-width: 500px;
+height:3.5%;
+flex-direction: row;
+background-color:rgb(216, 212, 207);
+align-items: center;
+border: solid grey 1px;
+justify-content:space-evenly;
+align-content: center;
+    }
+
+.menuitem {
+    font-family: Arial, Helvetica, sans-serif;
+    flex:1 1 20%;
+    align-self: center;
+    text-align: center;
+    border-right:solid rgb(203, 201, 201) 1px;
+    font-size: small;
+    align-items: center;
+}
+
+
+.menubutton{
+    width:100%;
+    background:none;
+    border:solid grey 1px;
+    position:relative;
+}
+
+.menubutton2{
+    width:100%;
+    background:none;
+    border:solid grey 1px;
+    position:relative;
+    margin-top: 0;
+    margin-bottom:40px;
+    padding-top:0px;
+    padding-bottom:0px;    
+    background-image:linear-gradient(0deg,azure,rgb(155,155,205,.5),lightblue);
+    border-radius:10%;
+}
+
+.comingsoon {
+    margin-top: -85px;
+    margin-bottom:30px;
+    padding-top: 0px;
+    padding-bottom:0px;
+    visibility: hidden;
+}
+
+#comingsoon{
+    visibility:hidden;
+}
+
+.menubutton3{
+    font-family: Arial, Helvetica, sans-serif;
+    flex:1 1 20%;
+    align-self: center;
+    text-align: center;
+    border-right:solid rgb(203, 201, 201) 1px;
+    border-radius: 5%;
+    font-size: small;
+    align-items: center;
+    background-image:linear-gradient(0deg,azure,rgb(155,155,205,.5),lightblue);
+}
+
+.menubutton3>.menubutton2:hover{
+    color:blue;
+    font-weight: 600;
+}   
+
+.menubutton3>.comingsoon{
+    color:blue;
+}
+
+.menubutton2:hover ~ .comingsoon{
+    visibility:visible;
+}  
+
+.soon{
+    position:relative;
+    display:inline-block;
+}
+
+.soontxt[xx="1"] ,.soontxt[xx="2"]{
+    z-index: 1;
+    color:red;
+    background-color:none;
+    position:relative;
+    visibility:visible;
+    font-size: smaller;
+    color:rgb(70, 134, 6);
+    text-align: center;
+    margin-top: -85px; 
+    visibility: hidden;
+}
+
+@keyframes blinker {
+    from {
+            opacity:0; 
+    }
+  
+    to {
+            opacity:1
+    } 
+}
+  
+#nowLooking {
+    animation-duration: 0.5s;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    transition-timing-function: linear;
+  }
+
+.nowlooking{
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    position: relative;
+    margin-top: -85px; 
+    margin-bottom:30px;
+    visibility: visible;
+    padding-top: 0px;
+    padding-bottom:0px;
+    z-index: 2;
+}
+
+.r1c2 {
+    display: grid; 
+    height: 250px; 
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 100%; 
+    border:solid 1px green;
+    border-radius: 5%;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}   
+
+.mainitem1{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 1;
+    border:green 1px solid;
+    height:99%;    
+    border-radius: 8%;
+    text-align: left;
+    padding-right:10px;
+    color:rgb(96, 95, 95);
+    background-color: rgb(243, 232, 220,.75);
+}
+
+.veg{
+    color:green;
+    font-size:smaller;
+}
+
+.messageBoard{
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 1;
+    height: 90%;
+    font-size: medium;
+    font-weight: 550;   
+    margin-left:1rem;
+    margin-top: auto;
+    margin-bottom:auto; 
+
+}
+
+.messageBlock{
+    display:flex;
+    flex-direction: column;
+    height:33%;
+    flex:1 1 1;
+    margin:0;
+}
+
+.headerMessage{
+    margin-bottom: 3px;
+    color:gray
+}
+
+.itemMessage{
+    margin-left:7rem;
+}
+
+
+.promopctn{
+    color: rgb(192, 62, 62);
+    font-weight: 600;
+}
+
+/*BROTHERS HISTORY*/
+
+.mainitem2{
+    display: flex;
+    flex-direction: column;
+    height:99%;
+    width:95%;
+    border-radius: 8%;
+    color:rgb(96, 95, 95);
+    background-color: rgb(243, 232, 220,.75);
+    border:1px solid green;
+    ;
+}
+
+.mainContainerBrothers{
+    display:flex;
+    height:100%;
+    width:100%;
+    flex-direction: column;    
+    border-radius: 8%;
+    background-color: rgb(243, 232, 220,.75);
+    padding-top: 5px;
+    padding-left: 5px;
+    color:rgb(121, 119, 119);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.containerBrothers1{
+    display:flex;
+    height:50%;
+    width:100%;
+    flex-direction: row;
+    margin-top:0px;
+    align-items: flex-end; 
+}
+
+.mainfirstrowpic {
+    flex:1 1 1;
+    height:85%;
+    width:14%;
+    border-radius: 8%;
+    padding-top:3px;
+    margin-left: 3px;    
+    margin-right:3px;    
+    }
+
+.txtbrothers1{
+    text-align: left;
+    height:90%;
+    width:89%;
+}
+
+.containerBrothers2{
+    display:flex;
+    height:60%;
+    width:98.5%;
+    flex-direction: column;
+    margin-top:0;
+    padding-bottom: 5px;
+    font-size: medium;
+}
+
+.txtbrothers2{
+    text-align: left;
+    color:rgb(121, 119, 119);
+    margin-left: 10px;
+    margin-bottom: 0;
+    -webkit-padding-start: 0%;
+    background-color:none;
+}
+
+
+.r2c3 {
+        display: grid;
+        height:300px; 
+        min-height: 300px;
+        max-height: 300px; 
+        grid-template-columns: 33.333% 33.333% 33.333%; 
+        border:solid 1px green;
+        border-radius: 5%;
+        min-width: 500px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+.mainitem2 {
+        border:solid green 1px;
+        border-radius: 8%;;
+        background-color: none;
+        text-align: center;
+        min-width: 166.666px;
+        min-height:250px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color:rgb(98, 97, 97);
+        margin-left: 7px;
+    }
+    
+.mainScndRowTxt{
+    margin-top: 2px;
+}
+
+.mainScndRowFirstPic{
+    width:65%;
+    height:auto;
+    border:solid 1px green;
+    border-radius: 3%;
+    margin-top: 0px;
+}
+
+.mainScndRowFirstPic:hover{
+    cursor:pointer;
+}
+
+.mainScndRowScndPic{
+    width:75%;
+    height:auto;
+    border:solid 1px green;
+    border-radius: 3%;
+    margin-top: 0px;
+    margin-bottom:0;
+}
+
+.mainScndRowScndPic:hover{
+    cursor:pointer;
+}
+
+.mainScndRowThirdPic{
+    width:auto;
+    height:200px;
+    border:solid 1px green;
+    border-radius: 3%;
+    margin-top: -2rem;
+    margin-bottom:0;
+}
+
+.mainScndRowThirdPic:hover{
+    cursor:pointer;
+}
+
